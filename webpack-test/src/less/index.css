@@ -1,0 +1,11 @@
+body {
+  background: red;
+}
+.box {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  background: url("../images/timg.jpg") no-repeat;
+  background-size: 100%;
+  border: 1px solid black;
+}
