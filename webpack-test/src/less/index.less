@@ -1,13 +1,15 @@
-@bgColor: red;
-body {
-    background: @bgColor;
-}
-
-.box {
-    display: inline-block;
-    width: 150px;
-    height: 150px;
-    background: url("../images/timg.jpg") no-repeat;
-    background-size: 100%;
-    border: 1px solid black;
+#head {
+    background: #444444;
+    .top-bar {
+        background: green;
+        display: flex;
+        justify-content: space-between;
+        font: 300 14px/40px "微软雅黑"; 
+        li {
+            display: inline-block;
+        }
+        a {
+            color: #ffffff;
+        }
+    }
 }

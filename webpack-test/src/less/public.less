@@ -1,0 +1,30 @@
+@minW: 1150px;
+@maxW: 1450px;
+
+body {
+    min-width: @minW;
+}
+
+#head, #foot {
+    box-sizing: border-box;
+    padding: 0 ~"calc((100% - 80%) / 2)";
+    min-width: @minW;
+}
+@media screen and (max-width: 1437.5px) {
+    #head, #foot {
+        padding: 0 ~"calc((100% - @{minW}) / 2)";
+    }
+}
+@media screen and (min-width: @maxW) {
+    #head, #foot {
+        padding: 0 ~"calc((100% - @{maxW}) / 2)";
+    }
+}
+#content {
+    width: 80%;
+    height: 2000px;
+    background: pink;
+    min-width: @minW;
+    max-width: @maxW;
+    margin: 0 auto;
+}
