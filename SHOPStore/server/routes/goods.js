@@ -19,22 +19,22 @@ router.get("/", (req, res) => {
     } else {
         let sql = "select * from goods"
     }
-    console.log(sql)
-    // if (sql) {
-    //     console.log("=====")
-    //     const db = getConnection();
-    //     db.connect();
-    //     db.query(sql, (err, sqlRes) => {
-    //         if (err) {
-    //             console.log(err.message);
-    //         } else {
-    //             res.send(JSON.stringify(sqlRes));
-    //         }
-    //     })
-    //     db.end();
-    // }else{
-    //     console.log("欢迎来到详情页")
-    // }
+
+    if (sql) {
+        console.log("=====")
+        const db = getConnection();
+        db.connect();
+        db.query(sql, (err, sqlRes) => {
+            if (err) {
+                console.log(err.message);
+            } else {
+                res.send(JSON.stringify(sqlRes));
+            }
+        })
+        db.end();
+    }else{
+        console.log("欢迎来到详情页")
+    }
 });
 
 
