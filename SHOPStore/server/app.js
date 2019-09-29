@@ -28,10 +28,11 @@ app.use(bodyParser.json());
 // 6. 处理路由
 const userRouter  = require("./routes/user");
 const otherRouter = require("./routes/other");
+const goodsRouter  = require("./routes/goods");
 app.use("/user", userRouter);
 app.use("/other", otherRouter);
 app.get("/", (req, res) => {
-    res.send("Hello, 木子李！")
+    res.send("Hello, nicolas family！")
 })
 
 // 7. 处理静态资源
