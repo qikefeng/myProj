@@ -2,10 +2,10 @@
 const mysql = require("mysql");
 // 默认配置
 const defaultOptions = {
-    host: "127.0.0.1",
+    host: "10.2.2.181",
     port: "3306",
     user: "root",
-    password: "123",
+    password: "123456",
     database: "SHOPStore"
 }
 // 获取connection对象
