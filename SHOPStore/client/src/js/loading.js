@@ -2,7 +2,7 @@ import { BASE_URL } from "./lib";
 
 
 //详情页---加载请求商品信息
-function loadingDetail() {
+export function loadingDetail() {
     return new Promise((resolve, reject) => {
         $.ajax({
             //请求接口
