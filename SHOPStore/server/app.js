@@ -31,13 +31,14 @@ const otherRouter = require("./routes/other");
 const goodsRouter  = require("./routes/goods");
 app.use("/user", userRouter);
 app.use("/other", otherRouter);
+app.use("/goods", goodsRouter);
 app.get("/", (req, res) => {
-    res.send("Hello, nicolas family！")
+    res.send("Hello, Nicolas family！")
 })
 
 // 7. 处理静态资源
 app.use(express.static("public"));
 
 // 8. 打印输出提示信息
-console.log("server running at http://0.0.0.0:8081");
+console.log("server start success!");
 
