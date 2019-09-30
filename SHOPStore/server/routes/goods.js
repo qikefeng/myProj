@@ -7,34 +7,34 @@ const router = express.Router();
 const getConnection = require("../mysqlConnection");
 
 router.get("/", (req, res) => {
-    console.log('用户请求商品信息')
-    let type = req.query.type;
-    let goods_name = req.query.goods_name;
-    if (req.query.type) {
-        let sql = `select * from goods where type = '${type}'`
-    } else if (req.query.goods_name) {
-        let sql = `select * from goods where name = ${goods_name}`
-    } else if (req.query.search_name) {
-        let sql = `select * from goods where name like '%${req.query.search_name}%'`
+    let sql = '';
+    const db = getConnection();
+    db.connect();
+    if (JSON.stringify(req.query) == "{}") {
+        console.log('用户请求全部商品')
+        sql = "select * from goods"
     } else {
-        let sql = "select * from goods"
+        if (req.query.type) {
+            console.log("用户请求相关类型")
+            sql = `select * from goods where type = '${type}'`
+        } else if (req.query.goods_name) {
+            console.log("用户请求商品详情")
+            sql = `select * from goods where name = '${req.query.goods_name}'`
+        } else if (req.query.search_name) {
+            console.log("用户搜索商品")
+            sql = `select * from goods where name like '%${req.query.search_name}%'`
+        }
     }
-
-    if (sql) {
-        console.log("=====")
-        const db = getConnection();
-        db.connect();
-        db.query(sql, (err, sqlRes) => {
-            if (err) {
-                console.log(err.message);
-            } else {
-                res.send(JSON.stringify(sqlRes));
-            }
-        })
-        db.end();
-    }else{
-        console.log("欢迎来到详情页")
-    }
+    console.log("sql语句：", sql)
+    db.query(sql, (err, sqlRes) => {
+        if(err) {
+            res.send(err.message);
+        }else {
+            console.log(sqlRes[0].color.split(",")[0])
+            res.send(sqlRes)
+        }
+    })
+    db.end();
 });
 
 
