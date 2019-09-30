@@ -19,7 +19,7 @@ router.get("/", (req, res) => {
             sql = `select * from goods where type = '${type}'`
         } else if (req.query.goods_name) {
             console.log("用户请求商品详情")
-            sql = `select * from goods where name = ${goods_name}`
+            sql = `select * from goods where name = '${req.query.goods_name}'`
         } else if (req.query.search_name) {
             console.log("用户搜索商品")
             sql = `select * from goods where name like '%${req.query.search_name}%'`
@@ -30,6 +30,7 @@ router.get("/", (req, res) => {
         if(err) {
             res.send(err.message);
         }else {
+            console.log(sqlRes[0].color.split(",")[0])
             res.send(sqlRes)
         }
     })
