@@ -9,7 +9,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "./node_modules/.bin/webpack-dev-server --config ./build/webpack.dev.config.js",
-    "build": "./node_modules/.bin/webpack --config ./build/webpack.dev.config.js --progress"
+    "build": "./node_modules/.bin/webpack --config ./build/webpack.dev.config.js --progress -w"
   },
   "keywords": [],
   "author": "",
@@ -36,6 +36,7 @@
     "webpack-dev-server": "^3.8.1"
   },
   "dependencies": {
-    "jquery": "^3.4.1"
+    "jquery": "^3.4.1",
+    "swiper": "^5.0.3"
   }
 }

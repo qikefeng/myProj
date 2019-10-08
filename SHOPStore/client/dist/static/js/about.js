@@ -64,7 +64,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "24923cff0c1d5ddd9dbc";
+/******/ 	var hotCurrentHash = "51cae362e40ea7258cbd";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -259,7 +259,7 @@
 /******/ 				};
 /******/ 			});
 /******/ 			hotUpdate = {};
-/******/ 			var chunkId = "detail";
+/******/ 			var chunkId = "about";
 /******/ 			// eslint-disable-next-line no-lone-blocks
 /******/ 			{
 /******/ 				/*globals chunkId */
@@ -792,31 +792,31 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return hotCreateRequire("./src/js/detail.js")(__webpack_require__.s = "./src/js/detail.js");
+/******/ 	return hotCreateRequire("./src/js/about.js")(__webpack_require__.s = "./src/js/about.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/js/detail.js":
-/*!**************************!*\
-  !*** ./src/js/detail.js ***!
-  \**************************/
+/***/ "./src/js/about.js":
+/*!*************************!*\
+  !*** ./src/js/about.js ***!
+  \*************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _less_detail_less__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../less/detail.less */ \"./src/less/detail.less\");\n/* harmony import */ var _less_detail_less__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_less_detail_less__WEBPACK_IMPORTED_MODULE_0__);\n\n\n//# sourceURL=webpack:///./src/js/detail.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _less_about_less__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../less/about.less */ \"./src/less/about.less\");\n/* harmony import */ var _less_about_less__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_less_about_less__WEBPACK_IMPORTED_MODULE_0__);\n\nconsole.log(\"This is about page.\");\n\n//# sourceURL=webpack:///./src/js/about.js?");
 
 /***/ }),
 
-/***/ "./src/less/detail.less":
-/*!******************************!*\
-  !*** ./src/less/detail.less ***!
-  \******************************/
+/***/ "./src/less/about.less":
+/*!*****************************!*\
+  !*** ./src/less/about.less ***!
+  \*****************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./src/less/detail.less?");
+eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./src/less/about.less?");
 
 /***/ })
 

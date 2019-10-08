@@ -10,7 +10,7 @@ module.exports = {
     entry,
     output: {
         path: path.resolve(__dirname, "../dist"),
-        filename: "static/js/[name]-[hash:5].js",
+        filename: "static/js/[name].js",
         publicPath: "http://127.0.0.1:8082/"
     },
     module: {rules},
