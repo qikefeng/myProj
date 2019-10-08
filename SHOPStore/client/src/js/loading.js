@@ -44,6 +44,8 @@ export function loadingDetail(goods_name) {
 
                 })
                 
+                //在详情页（detail.js）调用的时候.then()使用res中的type再次进行ajax请求把相关商品展示在详情页中的推荐产品中
+                console.log(res);
                 resolve(res);
             }
         })
