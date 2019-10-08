@@ -16,6 +16,8 @@ export function loadingDetail(goods_name) {
 
                 //获取需要显示的DOM元素，把拼接内容显示
 
+                //在详情页（detail.js）调用的时候.then()使用res中的type再次进行ajax请求把相关商品展示在详情页中的推荐产品中
+                console.log(res);
                 resolve(res);
             }
         })
