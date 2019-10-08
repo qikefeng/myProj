@@ -15,4 +15,9 @@ module.exports = [
         filename: "static/pages/about.html",
         chunks: ["about"],
     }),
+    new HtmlWebpackPlugin({
+        template: "./src/pages/detail.html",
+        filename: "static/pages/detail.html",
+        chunks: ["detail"],
+    })
 ]
