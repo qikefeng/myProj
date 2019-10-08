@@ -37,8 +37,9 @@ $(".buybtn").click(function () {
     $(".shop").toggleClass("showshop");
         $(".shade").click(function () {
             $(".showshop").removeClass("showshop");
-       
-
+    })
+    $(".g_buy").click(function () {
+        location.href = "account.html"
     })
     // $(".shade").click(function(){
     //     $(".shop").toggleClass("shop");

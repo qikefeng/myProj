@@ -259,7 +259,7 @@
 /******/ 				};
 /******/ 			});
 /******/ 			hotUpdate = {};
-/******/ 			var chunkId = "main";
+/******/ 			var chunkId = "loading";
 /******/ 			// eslint-disable-next-line no-lone-blocks
 /******/ 			{
 /******/ 				/*globals chunkId */
@@ -792,7 +792,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return hotCreateRequire("./src/js/index.js")(__webpack_require__.s = "./src/js/index.js");
+/******/ 	return hotCreateRequire("./src/js/loading.js")(__webpack_require__.s = "./src/js/loading.js");
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -808,18 +808,6 @@ eval("var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!\n * jQ
 
 /***/ }),
 
-/***/ "./src/js/index.js":
-/*!*************************!*\
-  !*** ./src/js/index.js ***!
-  \*************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var _less_normalized_less__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../less/normalized.less */ \"./src/less/normalized.less\");\n/* harmony import */ var _less_normalized_less__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_less_normalized_less__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _less_public_less__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../less/public.less */ \"./src/less/public.less\");\n/* harmony import */ var _less_public_less__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_less_public_less__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _less_index_less__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../less/index.less */ \"./src/less/index.less\");\n/* harmony import */ var _less_index_less__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_less_index_less__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _lib__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./lib */ \"./src/js/lib.js\");\n/* harmony import */ var _lib__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_lib__WEBPACK_IMPORTED_MODULE_3__);\n\n\n\n\n$(function () {\n  $(\".headlogo\").html(\"<img src=\\\"\".concat(_lib__WEBPACK_IMPORTED_MODULE_3__[\"BASE_URL\"], \"/images/sony-logo.jpg\\\">\"));\n});\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./src/js/index.js?");
-
-/***/ }),
-
 /***/ "./src/js/lib.js":
 /*!***********************!*\
   !*** ./src/js/lib.js ***!
@@ -831,36 +819,15 @@ eval("throw new Error(\"Module build failed (from ./node_modules/babel-loader/li
 
 /***/ }),
 
-/***/ "./src/less/index.less":
-/*!*****************************!*\
-  !*** ./src/less/index.less ***!
-  \*****************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ "./src/js/loading.js":
+/*!***************************!*\
+  !*** ./src/js/loading.js ***!
+  \***************************/
+/*! exports provided: loadingDetail */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./src/less/index.less?");
-
-/***/ }),
-
-/***/ "./src/less/normalized.less":
-/*!**********************************!*\
-  !*** ./src/less/normalized.less ***!
-  \**********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./src/less/normalized.less?");
-
-/***/ }),
-
-/***/ "./src/less/public.less":
-/*!******************************!*\
-  !*** ./src/less/public.less ***!
-  \******************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./src/less/public.less?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function($) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"loadingDetail\", function() { return loadingDetail; });\n/* harmony import */ var _lib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./lib */ \"./src/js/lib.js\");\n/* harmony import */ var _lib__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_lib__WEBPACK_IMPORTED_MODULE_0__);\n //详情页---加载请求商品信息\n\nfunction loadingDetail(goods_name) {\n  console.log(\"\".concat(_lib__WEBPACK_IMPORTED_MODULE_0__[\"BASE_URL\"], \"/goods/?goods_name=\").concat(goods_name));\n  return new Promise(function (resolve, reject) {\n    $.ajax({\n      //请求接口\n      url: \"\".concat(_lib__WEBPACK_IMPORTED_MODULE_0__[\"BASE_URL\"], \"/goods/?goods_name=\").concat(goods_name),\n      success: function success(res) {\n        //把请求后收到的res存入sessionStorage\n        sessionStorage.setItem('res', JSON.stringify(res)); //注！ res为数组，且color,standard字段为以逗号分隔的长字符串（需要分隔为数组后遍历拼接）\n\n        console.log(res);\n        var resArr = res[0];\n        console.log(resArr); ////获取需要显示的DOM元素，把拼接内容显示\n\n        $(\"#proname\").html(resArr.full_name);\n        $(\".Product_Fecture\").html(resArr.detail);\n        $(\".price\").html(\"RMB \".concat(resArr.price));\n        $(\".standard\").html(resArr.standard); // 颜色\n\n        var colors = resArr.color.split(\",\");\n        var colorstr = \"\";\n        console.log(colors);\n        $(colors).each(function (index, color) {\n          colorstr += \"<span class=\\\"col\\\">\".concat(color, \"</span>\");\n        });\n        $(\".option\").html(colorstr); // 切换颜色\n\n        var pre_index = 0;\n        $(\".col\").each(function (index, color) {\n          $(color).click(function () {\n            console.log(this);\n            $(this).addClass(\"sel\");\n            $(this).siblings().removeClass(\"sel\");\n            pre_index = index;\n          });\n        }); //在详情页（detail.js）调用的时候.then()使用res中的type再次进行ajax请求把相关商品展示在详情页中的推荐产品中\n\n        console.log(res);\n        resolve(res);\n      }\n    });\n  });\n}\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./src/js/loading.js?");
 
 /***/ })
 
