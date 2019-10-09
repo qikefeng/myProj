@@ -1,0 +1,322 @@
+@color-head: black;
+@color-nav: rgb(230, 232, 232);
+@nav-font: 16px;
+@choosecolor: rgb(16, 160, 213);
+
+@font-face {
+    font-family: 'iconfont';
+    /* project id 1286678 */
+    src: url('//at.alicdn.com/t/font_1286678_pfpa0yix0in.eot');
+    src: url('//at.alicdn.com/t/font_1286678_pfpa0yix0in.eot?#iefix') format('embedded-opentype'),
+        url('//at.alicdn.com/t/font_1286678_pfpa0yix0in.woff2') format('woff2'),
+        url('//at.alicdn.com/t/font_1286678_pfpa0yix0in.woff') format('woff'),
+        url('//at.alicdn.com/t/font_1286678_pfpa0yix0in.ttf') format('truetype'),
+        url('//at.alicdn.com/t/font_1286678_pfpa0yix0in.svg#iconfont') format('svg');
+}
+
+;
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+header {
+    height: 1600px;
+
+    #head {
+        background: @color-head;
+        height: 65px;
+        display: flex;
+
+        .headlogo {
+            line-height: 65px;
+            width: 10%;
+            min-width: 150px;
+        }
+
+        .nav {
+            width: 48%;
+            display: flex;
+            color: white;
+            font-size: 18px;
+            line-height: 65px;
+            text-align: center;
+
+            .iconfont {
+                font-size: 2px;
+                padding-left: 10px;
+            }
+
+            .typenav {
+                display: inline-block;
+                width: 23%;
+                min-width: 120px;
+                position: relative;
+                font-size: @nav-font;
+
+                .rightbox {
+                    width: 1px;
+                    height: 15px;
+                    border-right: 1px solid white;
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+
+                }
+
+                .typebox {
+                    color: black;
+                    font-size: 15px;
+                    line-height: 35px;
+                    background-color: @color-nav;
+                    min-width: 243px;
+                    position: absolute;
+                    right: 0;
+                    display: none;
+
+                    li {
+                        text-align: left;
+                        margin-left: 40px;
+                        position: relative;
+
+                        .iconfont {
+                            font-weight: lighter;
+                            color: gray;
+                            font-size: 15px;
+                            position: absolute;
+                            right: 20px;
+                        }
+
+                        hr {
+                            border: none;
+                            height: 1px;
+                            border-bottom: 1px solid white;
+                            width: 70%;
+                        }
+                    }
+                }
+            }
+
+            .typenav:hover .typebox {
+                display: block;
+            }
+
+            .typenav:hover b {
+                color: @choosecolor;
+            }
+
+            .webnav {
+                display: inline-block;
+                width: 23%;
+                position: relative;
+                font-size: @nav-font;
+
+                .webnav-ul {
+                    width: 970px;
+                    height: 460px;
+                    background-color: white;
+                    color: black;
+                    position: absolute;
+                    left: -150%;
+                    display: none;
+
+                    .webnav-li {
+                        display: inline-block;
+                        width: 13%;
+                        line-height: 40px;
+                        font-size: 15px;
+                        font-weight: bolder;
+                        vertical-align: top;
+                        margin-top: 40px;
+
+                        li {
+                            line-height: 30px;
+                            font-size: 12px;
+                            font-weight: normal;
+                        }
+
+                        li:hover {
+                            color: @choosecolor;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+
+            .webnav:hover .webnav-ul {
+                display: block;
+            }
+
+            .webnav:hover b {
+                color: @choosecolor;
+            }
+
+            .searchnav {
+                width: 50%;
+                position: relative;
+
+                .searchbox {
+                    line-height: 26px;
+                    width: 230px;
+                    border-radius: 10px;
+                    background-color: white;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+
+                    #search-input {
+                        width: 75%;
+                        line-height: 25px;
+                    }
+
+                    .iconfont {
+                        width: 24%;
+                        color: black;
+                        font-size: 20px;
+                    }
+                }
+            }
+
+        }
+
+        .headright {
+            width: 40%;
+            min-width: 440px;
+            line-height: 65px;
+            display: flex;
+            margin-left: 50px;
+
+
+            .loginbox {
+                color: rgb(31, 168, 226);
+                width: 30%;
+                min-width: 110px;
+                text-align: center;
+                position: relative;
+                font-size: @nav-font;
+
+                .rightbox {
+                    width: 1px;
+                    height: 15px;
+                    border-right: 1px solid white;
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+
+                }
+            }
+
+            .loginbox span:hover {
+                cursor: pointer;
+            }
+
+            .mysony {
+                color: white;
+                width: 30%;
+                min-width: 110px;
+                text-align: center;
+                position: relative;
+                font-size: @nav-font;
+
+                .mysony-ul {
+                    background: white;
+                    color: gray;
+                    line-height: 35px;
+                    font-size: 13px;
+                    display: none;
+
+                    li {
+                        border-bottom: 1px solid rgb(220, 220, 220);
+                    }
+
+                    li:hover {
+                        color: @choosecolor;
+                        cursor: pointer;
+                    }
+                }
+
+                .iconfont {
+                    font-size: 2px;
+                    padding-left: 10px;
+                }
+
+                .rightbox {
+                    width: 1px;
+                    height: 15px;
+                    border-right: 1px solid white;
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+
+                }
+            }
+
+            .mysony:hover .mysony-ul {
+                display: block;
+            }
+
+            .mysony:hover b {
+                color: @choosecolor;
+            }
+
+            .support {
+                width: 30%;
+                min-width: 110px;
+                color: white;
+                text-align: center;
+                font-size: @nav-font;
+
+                .iconfont {
+                    font-size: 2px;
+                    padding-left: 10px;
+                }
+
+                .support-ul {
+                    background: white;
+                    color: gray;
+                    line-height: 35px;
+                    font-size: 13px;
+                    display: none;
+
+                    li {
+                        border-bottom: 1px solid rgb(220, 220, 220);
+                    }
+
+                    li:hover {
+                        color: @choosecolor;
+                        cursor: pointer;
+                    }
+                }
+
+            }
+
+            .support:hover .support-ul {
+                display: block;
+            }
+
+            .support:hover b {
+                color: @choosecolor;
+            }
+
+            .shoppingcar {
+                width: 9%;
+
+
+                .iconfont {
+                    font-size: 30px;
+                    color: white;
+                }
+            }
+        }
+    }
+}

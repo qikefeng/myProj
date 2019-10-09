@@ -1,0 +1,257 @@
+@font-face {
+  font-family: 'iconfont';
+  /* project id 1286678 */
+  src: url('//at.alicdn.com/t/font_1286678_pfpa0yix0in.eot');
+  src: url('//at.alicdn.com/t/font_1286678_pfpa0yix0in.eot?#iefix') format('embedded-opentype'), url('//at.alicdn.com/t/font_1286678_pfpa0yix0in.woff2') format('woff2'), url('//at.alicdn.com/t/font_1286678_pfpa0yix0in.woff') format('woff'), url('//at.alicdn.com/t/font_1286678_pfpa0yix0in.ttf') format('truetype'), url('//at.alicdn.com/t/font_1286678_pfpa0yix0in.svg#iconfont') format('svg');
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+header {
+  height: 1600px;
+}
+header #head {
+  background: black;
+  height: 65px;
+  display: flex;
+}
+header #head .headlogo {
+  line-height: 65px;
+  width: 10%;
+  min-width: 150px;
+}
+header #head .nav {
+  width: 48%;
+  display: flex;
+  color: white;
+  font-size: 18px;
+  line-height: 65px;
+  text-align: center;
+}
+header #head .nav .iconfont {
+  font-size: 2px;
+  padding-left: 10px;
+}
+header #head .nav .typenav {
+  display: inline-block;
+  width: 23%;
+  min-width: 120px;
+  position: relative;
+  font-size: 16px;
+}
+header #head .nav .typenav .rightbox {
+  width: 1px;
+  height: 15px;
+  border-right: 1px solid white;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+header #head .nav .typenav .typebox {
+  color: black;
+  font-size: 15px;
+  line-height: 35px;
+  background-color: #e6e8e8;
+  min-width: 243px;
+  position: absolute;
+  right: 0;
+  display: none;
+}
+header #head .nav .typenav .typebox li {
+  text-align: left;
+  margin-left: 40px;
+  position: relative;
+}
+header #head .nav .typenav .typebox li .iconfont {
+  font-weight: lighter;
+  color: gray;
+  font-size: 15px;
+  position: absolute;
+  right: 20px;
+}
+header #head .nav .typenav .typebox li hr {
+  border: none;
+  height: 1px;
+  border-bottom: 1px solid white;
+  width: 70%;
+}
+header #head .nav .typenav:hover .typebox {
+  display: block;
+}
+header #head .nav .typenav:hover b {
+  color: #10a0d5;
+}
+header #head .nav .webnav {
+  display: inline-block;
+  width: 23%;
+  position: relative;
+  font-size: 16px;
+}
+header #head .nav .webnav .webnav-ul {
+  width: 970px;
+  height: 460px;
+  background-color: white;
+  color: black;
+  position: absolute;
+  left: -150%;
+  display: none;
+}
+header #head .nav .webnav .webnav-ul .webnav-li {
+  display: inline-block;
+  width: 13%;
+  line-height: 40px;
+  font-size: 15px;
+  font-weight: bolder;
+  vertical-align: top;
+  margin-top: 40px;
+}
+header #head .nav .webnav .webnav-ul .webnav-li li {
+  line-height: 30px;
+  font-size: 12px;
+  font-weight: normal;
+}
+header #head .nav .webnav .webnav-ul .webnav-li li:hover {
+  color: #10a0d5;
+  cursor: pointer;
+}
+header #head .nav .webnav:hover .webnav-ul {
+  display: block;
+}
+header #head .nav .webnav:hover b {
+  color: #10a0d5;
+}
+header #head .nav .searchnav {
+  width: 50%;
+  position: relative;
+}
+header #head .nav .searchnav .searchbox {
+  line-height: 26px;
+  width: 230px;
+  border-radius: 10px;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+header #head .nav .searchnav .searchbox #search-input {
+  width: 75%;
+  line-height: 25px;
+}
+header #head .nav .searchnav .searchbox .iconfont {
+  width: 24%;
+  color: black;
+  font-size: 20px;
+}
+header #head .headright {
+  width: 40%;
+  min-width: 440px;
+  line-height: 65px;
+  display: flex;
+  margin-left: 50px;
+}
+header #head .headright .loginbox {
+  color: #1fa8e2;
+  width: 30%;
+  min-width: 110px;
+  text-align: center;
+  position: relative;
+  font-size: 16px;
+}
+header #head .headright .loginbox .rightbox {
+  width: 1px;
+  height: 15px;
+  border-right: 1px solid white;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+header #head .headright .loginbox span:hover {
+  cursor: pointer;
+}
+header #head .headright .mysony {
+  color: white;
+  width: 30%;
+  min-width: 110px;
+  text-align: center;
+  position: relative;
+  font-size: 16px;
+}
+header #head .headright .mysony .mysony-ul {
+  background: white;
+  color: gray;
+  line-height: 35px;
+  font-size: 13px;
+  display: none;
+}
+header #head .headright .mysony .mysony-ul li {
+  border-bottom: 1px solid #dcdcdc;
+}
+header #head .headright .mysony .mysony-ul li:hover {
+  color: #10a0d5;
+  cursor: pointer;
+}
+header #head .headright .mysony .iconfont {
+  font-size: 2px;
+  padding-left: 10px;
+}
+header #head .headright .mysony .rightbox {
+  width: 1px;
+  height: 15px;
+  border-right: 1px solid white;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+header #head .headright .mysony:hover .mysony-ul {
+  display: block;
+}
+header #head .headright .mysony:hover b {
+  color: #10a0d5;
+}
+header #head .headright .support {
+  width: 30%;
+  min-width: 110px;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+}
+header #head .headright .support .iconfont {
+  font-size: 2px;
+  padding-left: 10px;
+}
+header #head .headright .support .support-ul {
+  background: white;
+  color: gray;
+  line-height: 35px;
+  font-size: 13px;
+  display: none;
+}
+header #head .headright .support .support-ul li {
+  border-bottom: 1px solid #dcdcdc;
+}
+header #head .headright .support .support-ul li:hover {
+  color: #10a0d5;
+  cursor: pointer;
+}
+header #head .headright .support:hover .support-ul {
+  display: block;
+}
+header #head .headright .support:hover b {
+  color: #10a0d5;
+}
+header #head .headright .shoppingcar {
+  width: 9%;
+}
+header #head .headright .shoppingcar .iconfont {
+  font-size: 30px;
+  color: white;
+}

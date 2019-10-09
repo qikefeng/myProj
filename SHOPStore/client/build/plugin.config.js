@@ -6,8 +6,8 @@ const OptimizeCssAssetsPlugin  = require("optimize-css-assets-webpack-plugin")
 
 module.exports = [
     ...HtmlConfig,
-    new CleanWebpackPlugin(),
-    new ExtractTextPlugin("static/css/[name]-[hash:5].css"),
+    // new CleanWebpackPlugin(),
+    new ExtractTextPlugin("static/css/[name].css"),
     new webpack.ProvidePlugin({
         $:"jquery"
     }),
