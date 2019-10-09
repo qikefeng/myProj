@@ -2,6 +2,7 @@ import "../less/normalized.less";
 import "../less/public.less";
 import "../less/index.less";
 import "../less/head.less";
+import "../less/footer.less";
 
 import { BASE_URL } from "./lib";
 
@@ -56,3 +57,7 @@ $(function(){
 
 })
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> bbe2dd713d224388e378065fa37e3c5dcb4c4ccd
