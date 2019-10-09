@@ -170,9 +170,10 @@
             </ul>
             <div class="headright">
                 <div class="loginbox">
-                    <span>登陆 /</span>
-                    <span> 注册</span>
+                    <span class="login-btn">登陆 /</span>
+                    <span class="register-btn"> 注册</span>
                     <div class="rightbox"></div>
+
                 </div>
                 <div class="mysony"><span>My Sony</span><b class="iconfont">&#xe64a;</b>
                     <div class="rightbox"></div>
@@ -198,7 +199,49 @@
                 </div>
                 <div class="shoppingcar"><b class="iconfont">&#xe611;</b></div>
             </div>
-        </div>
+            <div class="login">
+                <div class="login-title">
+                    <img class="login-but" src="http://127.0.0.1:8081/images/login1.jpg" width="230" height="55">
+                    <img class="register-but" src="http://127.0.0.1:8081/images/login2.jpg" width="230" height="55">
+                    <img class="cha" src="http://127.0.0.1:8081/images/cha.jpg" width="45px">
+                </div>
+                <input type="text" placeholder="邮箱/用户名/手机号" class="username"><br>
+                <input type="password" placeholder="密码" class="password"><br>
+                <div class="login-an">
+                    <input type="checkbox" class="jizhu">
+                    <p>记住用户名</p><br>
+                    <button>登 录</button>
+                    <p class="tis">如果您的用户名密码无法登录，请联系 400-810-1228</p>
+                </div>
+            </div>
+            <div class="register">
+                <div class="register-title">
+                    <img class="login-but" src="http://127.0.0.1:8081/images/register1.jpg" width="230" height="55">
+                    <img class="register-but" src="http://127.0.0.1:8081/images/register2.jpg" width="230" height="55">
+                    <img class="cha" src="http://127.0.0.1:8081/images/cha.jpg" width="45px">
+                </div>
+                <form action="">
+
+                    <section class="item" data-tips="请输入正确的手机号">
+                        <input type="text" placeholder="输入手机号"><br>
+                    </section>
+
+                    <section class="item" data-tips="请输入正确邮箱地址">
+                        <input type="text" placeholder="电子邮箱地址"
+                            data-reg="^([a-zA-Z0-9]{1,})@([a-zA-Z0-9]{1,})(\.com)$"><br>
+                    </section>
+
+                    <section class="item" data-tips="请设置6位以上，且只能包含字母数字下划线">
+                        <input type="password" placeholder="密码 *" id="password" data-reg="[a-zA-Z0-9_]{6,}"><br>
+                    </section>
+
+                    <section class="item" data-tips="两次密码必须一致">
+                        <input type="password" placeholder="再次输入密码" class=""><br>
+                    </section>
+                </form>
+                <button>注 册</button>
+
+            </div>
 
 
 
@@ -685,12 +728,16 @@
                     <a href="JavaScript:0"></a>
                 </li>
             </ul>
-            <div class="xwtz">
-                <h4>新闻通知</h4>
+            <div class="bottmo">
+                <div bottom-left>
+                    <div class="xwtz">
+                        <h4>新闻通知</h4>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
-    
+
     <footer id="foot"></footer>
 </body>
 

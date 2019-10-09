@@ -8,13 +8,8 @@
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-<<<<<<< HEAD
-    "dev": "./node_modules/.bin/webpack-dev-server --config ./build/webpack.dev.config.js -w",
-    "build": "./node_modules/.bin/webpack --config ./build/webpack.dev.config.js --progress"
-=======
     "dev": "./node_modules/.bin/webpack-dev-server --config ./build/webpack.dev.config.js",
     "build": "./node_modules/.bin/webpack --config ./build/webpack.dev.config.js --progress -w"
->>>>>>> 56881928bc9e249f6a006da80490f8876567e4d7
   },
   "keywords": [],
   "author": "",

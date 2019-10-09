@@ -259,7 +259,7 @@
 /******/ 				};
 /******/ 			});
 /******/ 			hotUpdate = {};
-/******/ 			var chunkId = "about";
+/******/ 			var chunkId = "account";
 /******/ 			// eslint-disable-next-line no-lone-blocks
 /******/ 			{
 /******/ 				/*globals chunkId */
@@ -792,31 +792,19 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return hotCreateRequire("./src/js/about.js")(__webpack_require__.s = "./src/js/about.js");
+/******/ 	return hotCreateRequire("./src/js/account.js")(__webpack_require__.s = "./src/js/account.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/js/about.js":
-/*!*************************!*\
-  !*** ./src/js/about.js ***!
-  \*************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _less_about_less__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../less/about.less */ \"./src/less/about.less\");\n/* harmony import */ var _less_about_less__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_less_about_less__WEBPACK_IMPORTED_MODULE_0__);\n\nconsole.log(\"This is about page.\");\n\n//# sourceURL=webpack:///./src/js/about.js?");
-
-/***/ }),
-
-/***/ "./src/less/about.less":
-/*!*****************************!*\
-  !*** ./src/less/about.less ***!
-  \*****************************/
+/***/ "./src/js/account.js":
+/*!***************************!*\
+  !*** ./src/js/account.js ***!
+  \***************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./src/less/about.less?");
+eval("\n\n//# sourceURL=webpack:///./src/js/account.js?");
 
 /***/ })
 
