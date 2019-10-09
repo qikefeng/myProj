@@ -19,5 +19,10 @@ module.exports = [
         template: "./src/pages/detail.html",
         filename: "static/pages/detail.html",
         chunks: ["detail"],
+    }),
+    new HtmlWebpackPlugin({
+        template: "./src/pages/account.html",
+        filename: "static/pages/account.html",
+        chunks: ["account"],
     })
 ]
