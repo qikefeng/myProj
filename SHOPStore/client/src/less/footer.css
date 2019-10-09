@@ -1,0 +1,119 @@
+footer {
+  background: black;
+  min-width: 1280px;
+  height: 416px;
+  color: white;
+}
+footer .footmain {
+  height: 286px;
+  display: flex;
+  justify-content: center;
+}
+footer .footmain .footleft {
+  width: 18%;
+}
+footer .footmain .footleft p {
+  font-size: 15px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+footer .footmain .footleft .graytext {
+  color: gray;
+  font-size: 13px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+footer .footmain .footleft .graytext:hover {
+  color: #10a0d5;
+  cursor: pointer;
+}
+footer .footmain .footcenter {
+  width: 18%;
+}
+footer .footmain .footcenter .ttbox {
+  font-size: 15px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+footer .footmain .footcenter .weibo {
+  width: 178px;
+  line-height: 36px;
+  font-size: 13px;
+  margin-top: 10px;
+  text-align: center;
+  color: gray;
+  background: #464646;
+}
+footer .footmain .footcenter .bottombox {
+  margin-top: 20px;
+  color: gray;
+  font-size: 13px;
+}
+footer .footmain .footcenter .bottombox:hover {
+  color: #10a0d5;
+  cursor: pointer;
+}
+footer .footmain .footright {
+  width: 40%;
+  margin-top: 30px;
+  margin-left: 100px;
+  font-size: 15px;
+}
+footer .footmain .footright .footr-ul {
+  display: flex;
+  justify-content: space-between;
+}
+footer .footmain .footright .footr-ul .footr-li {
+  width: 22%;
+  display: inline-block;
+  vertical-align: top;
+}
+footer .footmain .footright .footr-ul .footr-li li {
+  font-size: 13px;
+  color: gray;
+  margin-top: 10px;
+}
+footer .footmain .footright .footr-ul .footr-li li:hover {
+  color: #10a0d5;
+  cursor: pointer;
+}
+footer .footbottom {
+  height: 130px;
+  width: 82%;
+  min-width: 1250px;
+  border-top: 1px solid gray;
+  margin: 0 auto;
+}
+footer .footbottom .firstline {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+footer .footbottom .firstline .left {
+  width: 42%;
+}
+footer .footbottom .firstline .left span {
+  margin-right: 30px;
+}
+footer .footbottom .firstline .right {
+  width: 17%;
+  text-align: right;
+}
+footer .footbottom .lastline {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: gray;
+}
+footer .footbottom .lastline .left {
+  width: 55%;
+}
+footer .footbottom .lastline .left span {
+  margin-right: 20px;
+}
+footer .footbottom .lastline .right {
+  width: 23%;
+  text-align: right;
+}
