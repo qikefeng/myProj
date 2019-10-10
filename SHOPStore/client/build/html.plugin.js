@@ -21,6 +21,11 @@ module.exports = [
         chunks: ["detail"],
     }),
     new HtmlWebpackPlugin({
+        template: "./src/pages/search.html",
+        filename: "static/pages/search.html",
+        chunks: ["search"],
+    }),
+    new HtmlWebpackPlugin({
         template: "./src/pages/account.html",
         filename: "static/pages/account.html",
         chunks: ["account"],

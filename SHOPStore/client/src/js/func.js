@@ -1,3 +1,4 @@
+import { BASE_URL } from "./lib";
 export function checklogin() {
     var lg = document.querySelector('.headright .login-btn');
     var rg = document.querySelector('.headright .register-btn');
@@ -17,6 +18,10 @@ export function checklogin() {
 
 export function login_and_register() {
     //登录注册显示隐藏
+    $(".headlogo").html(`<img src="${BASE_URL}/images/sony-logo.jpg">`);
+    $(".searchbox b").on("click", function(){
+        location.href = "../../dist/static/pages/search.html";
+    });
     $(".login-btn").on("click", function () {
         $(".login").css("display", "block")
     });

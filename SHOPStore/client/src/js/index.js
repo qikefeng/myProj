@@ -10,8 +10,10 @@ import { user_login, login_and_register, checklogin, totop } from "../js/func";
 
 $(function(){
    checklogin()
-    $(".headlogo").html(`<img src="${BASE_URL}/images/sony-logo.jpg" >`);
 
+    $(".searchnav .iconfont").on("click", function () {
+      window.location.href = "search.html"
+   });
     // 遍历数组添加img标签
    var obj = $( ".gr4 .gri" );
    var arr = $.makeArray( obj );

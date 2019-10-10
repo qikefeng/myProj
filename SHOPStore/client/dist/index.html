@@ -9,11 +9,6 @@
 <link href="http://127.0.0.1:8082/static/css/main.css" rel="stylesheet"></head>
 
 <body>
-<<<<<<< HEAD
-    <header id="head">
-        <div class="headlogo"></div>
-        <div class="typebox"></div>
-=======
     <header>
         <div id="head">
             <div class="headlogo"></div>
@@ -178,9 +173,9 @@
                     <span class="login-btn">登陆 /</span>
                     <span class="register-btn"> 注册</span>
                     <div class="rightbox"></div>
-                    <div class="login">
-                        
-                    </div>
+                    <div class="usr"></div>
+                    <div class="user">退出</div>
+
                 </div>
                 <div class="mysony"><span>My Sony</span><b class="iconfont">&#xe64a;</b>
                     <div class="rightbox"></div>
@@ -206,13 +201,121 @@
                 </div>
                 <div class="shoppingcar"><b class="iconfont">&#xe611;</b></div>
             </div>
-        </div>
+            <div class="loginandregister">
+                <div class="login">
+                    <div class="login-title">
+                        <img class="login-but" src="http://127.0.0.1:8081/images/login1.jpg" width="230" height="55">
+                        <img class="register-but" src="http://127.0.0.1:8081/images/login2.jpg" width="230" height="55">
+                        <img class="cha" src="http://127.0.0.1:8081/images/cha.jpg" width="45px">
+                    </div>
+                    <input type="text" placeholder="邮箱/用户名/手机号" class="username" id="login_username"><br>
+                    <input type="password" placeholder="密码" class="password" id="login_password"><br>
+                    <div class="login-an">
+                        <input type="checkbox" class="jizhu">
+                        <p>记住用户名</p><br>
+                        <button type="button" id="loginBtn">登 录</button>
+                        <p class="tis">如果您的用户名密码无法登录，请联系 400-810-1228</p>
+                    </div>
+                </div>
+                <div class="register">
+                    <div class="register-title">
+                        <img class="login-but" src="http://127.0.0.1:8081/images/register1.jpg" width="230" height="55">
+                        <img class="register-but" src="http://127.0.0.1:8081/images/register2.jpg" width="230"
+                            height="55">
+                        <img class="cha" src="http://127.0.0.1:8081/images/cha.jpg" width="45px">
+                    </div>
+                    <form action="">
 
+                        <section class="item" data-tips="请输入正确的手机号">
+                            <input type="text" placeholder="输入手机号" data-reg="^[1][0-9]{10}$" id="phonenumber"><br>
+                        </section>
 
->>>>>>> 96f5a55bc4648157b721e25d81e08139cfd1203c
+                        <section class="item" data-tips="请输入正确邮箱地址">
+                            <input type="text" placeholder="电子邮箱地址"
+                                data-reg="^([a-zA-Z0-9]{1,})@([a-zA-Z0-9]{1,})(\.com)$" id="email"><br>
+                        </section>
 
+                        <section class="item" data-tips="请设置6位以上，且只能包含字母数字下划线">
+                            <input type="password" placeholder="密码 *" id="password" data-reg="[a-zA-Z0-9_]{6,}"><br>
+                        </section>
+
+                        <section class="item" data-tips="两次密码必须一致">
+                            <input type="password" placeholder="再次输入密码" id="pwdagin"><br>
+                        </section>
+                    </form>
+                    <button type="button" id="registerBtn">注 册</button>
+
+                </div>
+            </div>
+            <div class="totop">top</div>
     </header>
     <main id="content">
+        <!-- 图片轮播 -->
+        <div class="scroll">
+            <div class="flash">
+                <!-- 图片 -->
+                <div class="wrapper">
+                    <img src="http://127.0.0.1:8081/images/nav3.jpg" alt="loadding err" class="slide">
+
+                    <img src="http://127.0.0.1:8081/images/nav1.jpg" alt="loadding err" class="slide">
+                    <img src="http://127.0.0.1:8081/images/nav2.jpg" alt="loadding err" class="slide">
+                    <img src="http://127.0.0.1:8081/images/nav3.jpg" alt="loadding err" class="slide">
+
+                    <img src="http://127.0.0.1:8081/images/nav1.jpg" alt="loadding err" class="slide">
+                </div>
+                <!-- 按钮 -->
+                <div class="button prev"></div>
+                <div class="button next"></div>
+                <!-- 分页 -->
+                <div class="pagination">
+                    <section class="pagination-item sel"></section>
+                    <section class="pagination-item"></section>
+                    <section class="pagination-item"></section>
+                </div>
+            </div>
+        </div>
+
+        <!-- 图片轮播二 -->
+        <div class="scroll2">
+            <h1>最新活动</h1>
+            <div class="flash2">
+                <!-- 图片 -->
+                <div class="wrapper2">
+                    <div class="slide2">
+                        <img src="http://127.0.0.1:8081/images/newhd5.jpg">
+                        <img src="http://127.0.0.1:8081/images/newhd6.jpg">
+                    </div>
+
+                    <div class="slide2">
+                        <img src="http://127.0.0.1:8081/images/newhd1.jpg">
+                        <img src="http://127.0.0.1:8081/images/newhd2.jpg">
+                    </div>
+                    <div class="slide2">
+                        <img src="http://127.0.0.1:8081/images/newhd3.jpg">
+                        <img src="http://127.0.0.1:8081/images/newhd4.jpg">
+                    </div>
+                    <div class="slide2">
+                        <img src="http://127.0.0.1:8081/images/newhd5.jpg">
+                        <img src="http://127.0.0.1:8081/images/newhd6.jpg">
+                    </div>
+
+                    <div class="slide2">
+                        <img src="http://127.0.0.1:8081/images/newhd1.jpg">
+                        <img src="http://127.0.0.1:8081/images/newhd2.jpg">
+                    </div>
+                </div>
+                <!-- 按钮 -->
+                <div class="button2 prev2"></div>
+                <div class="button2 next2"></div>
+                <!-- 分页 -->
+                <div class="pagination2">
+                    <section class="pagination-item2 sel2"></section>
+                    <section class="pagination-item2"></section>
+                    <section class="pagination-item2"></section>
+                </div>
+            </div>
+        </div>
+
         <!-- 新品发布 -->
         <div class="New-product">
             <div class="juzhong">
@@ -286,16 +389,16 @@
                     </div>
                     <div class="gri">
                         <div>
-                            <p>WHAKS-12</p>
-                            <h3>高解析度音乐播放器</h3>
-                            <p>RMB 1,999</p>
+                            <p>WI-1000X</p>
+                            <h3>降噪静界 智能聆听</h3>
+                            <p>RMB 2,299</p>
                         </div>
                         <img src="http://127.0.0.1:8081/images/yp3.jpg" height="100%" width="100%">
                     </div>
                     <div class="gri">
                         <div class="baizhi">
                             <p>WHAKS-12</p>
-                            <h3>高解析度<br>音乐播放器</h3>
+                            <h3>无线降噪<br>立体声耳机</h3>
                             <p>RMB 1,999</p>
                         </div>
                         <img src="http://127.0.0.1:8081/images/yp4.jpg" height="100%" width="100%">
@@ -470,10 +573,7 @@
                 </ul>
 
             </div>
-<<<<<<< HEAD
-=======
             <!-- 潮玩科技 -->
->>>>>>> 96f5a55bc4648157b721e25d81e08139cfd1203c
             <div class="Tide-play-technology">
                 <h2><img src="https://www.sonystyle.com.cn/content/dam/sonystyle/common/othericon/znyj_36x36.png">
                     潮玩科技
@@ -543,8 +643,6 @@
                     <li><a href="JavaScript:0">FES Closet</a></li>
                 </ul>
             </div>
-<<<<<<< HEAD
-=======
             <!-- 影音娱乐 -->
             <div class="entertainment">
                 <h2><img src="https://www.sonystyle.com.cn/content/dam/sonystyle/common/othericon/blocktitlelogo3.png">
@@ -699,14 +797,94 @@
                     <a href="JavaScript:0"></a>
                 </li>
             </ul>
-            <div class="xwtz">
-                <h4>新闻通知</h4>
-            </div>
->>>>>>> 96f5a55bc4648157b721e25d81e08139cfd1203c
         </div>
     </main>
-    
-    <footer id="foot"></footer>
+
+    <footer>
+        <div class="footmain">
+            <div class="footleft">
+                <p>Sony Store 直营店</p>
+                <p>你周围的经销商</p>
+                <p class="graytext">就近的门店查询</p>
+                <p class="graytext">就近维修站查询</p>
+            </div>
+            <div class="footcenter">
+                <p class="ttbox">关注我们</p>
+                <div class="weibo">索尼（中国）官方微博</div>
+                <div class="weibo">索尼（中国）官方微信</div>
+                <p class="bottombox">手机客户端</p>
+                <p class="bottombox">在线服务</p>
+            </div>
+            <div class="footright">
+                <ul class="footr-ul">
+                    <li class="footr-li">如何订购
+                        <ul>
+                            <li>在线订购指南</li>
+                            <li>销售条款</li>
+                            <li>付款方式</li>
+                            <li>货物配送</li>
+                            <li>收货流程</li>
+                            <li>退货流程</li>
+                        </ul>
+                    </li>
+                    <li class="footr-li">会员天地
+                        <ul>
+                            <li>我的索尼</li>
+                            <li>最新动态</li>
+                            <li>产品注册</li>
+                            <li>My Sony学院</li>
+                            <li>会员权益</li>
+                        </ul>
+                    </li>
+                    <li class="footr-li">服务与支持
+                        <ul>
+                            <li>产品说明书</li>
+                            <li>驱动程序检索</li>
+                            <li>常见问题</li>
+                            <li>保修条款</li>
+                            <li>维修网络查询</li>
+                            <li>索尼手机客户服务</li>
+                            <li>服务动态</li>
+                        </ul>
+                    </li>
+                    <li class="footr-li">相关链接
+                        <ul>
+                            <li>应用中心</li>
+                            <li>视频教程中心</li>
+                            <li>行业解决方案</li>
+                            <li>新闻中心</li>
+                            <li>影像产品正品认证</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footbottom">
+            <div class="firstline">
+                <div class="left">
+                    <span>索尼中国首页</span>
+                    <span>联系我们</span>
+                    <span>责任声明</span>
+                    <span>营业执照</span>
+                    <span>索尼隐私政策</span>
+                </div>
+                <div class="right">
+                    <p>2019索尼（中国）有限公司 版权所有</p>
+                </div>
+            </div>
+            <div class="lastline">
+                <div class="left">
+                    <span>本网站包含推销产品或服务的广告</span>
+                    <span>京ICP备05036958号</span>
+                    <span>京公网安备 11010502031585号</span>
+                    <span>诚信网站认证</span>
+                </div>
+                <div class="right">
+                    <p>您访问本网站将会被监控，请点击此处获得详细信息</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 <script type="text/javascript" src="http://127.0.0.1:8082/static/js/main.js"></script></body>
 
 </html>

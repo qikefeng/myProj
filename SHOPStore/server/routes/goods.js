@@ -30,7 +30,7 @@ router.get("/", (req, res) => {
         if(err) {
             res.send(err.message);
         }else {
-            console.log(sqlRes[0].color.split(",")[0])
+            // console.log(sqlRes[0].color.split(",")[0])
             res.send(sqlRes)
         }
     })
