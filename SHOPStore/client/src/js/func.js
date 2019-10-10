@@ -180,3 +180,32 @@ export function user_login() {
     }
 
 }
+
+export function totop() {
+    var topbtn = document.querySelector('#head .totop');
+    var isAnimtaing = false;
+    var interval = 15;
+    var offset = 0;
+
+    window.addEventListener("scroll", function () {
+        offset = document.body.scrollTop || document.documentElement.scrollTop;
+    }, true);
+
+    topbtn.onclick = function () {
+        if (isAnimtaing) {
+            return;
+        }
+
+        var t = setInterval(function () {
+            if (offset > 0) {
+                document.body.scrollTop = document.documentElement.scrollTop = offset - (Math.ceil(offset / (200 / interval)))
+            } else {
+                clearInterval(t);
+                isAnimtaing = false;
+            }
+        }, interval)
+    }
+
+
+
+}

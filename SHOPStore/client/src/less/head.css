@@ -13,7 +13,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 header {
-  height: 1600px;
+  height: 65px;
 }
 header #head {
   background: black;
@@ -32,6 +32,7 @@ header #head .nav {
   font-size: 18px;
   line-height: 65px;
   text-align: center;
+  z-index: 5;
 }
 header #head .nav .iconfont {
   font-size: 2px;
@@ -199,6 +200,7 @@ header #head .headright .mysony {
   text-align: center;
   position: relative;
   font-size: 16px;
+  z-index: 5;
 }
 header #head .headright .mysony .mysony-ul {
   background: white;
@@ -239,6 +241,7 @@ header #head .headright .support {
   color: white;
   text-align: center;
   font-size: 16px;
+  z-index: 5;
 }
 header #head .headright .support .iconfont {
   font-size: 2px;
@@ -271,6 +274,17 @@ header #head .headright .shoppingcar .iconfont {
   font-size: 30px;
   color: white;
 }
+header #head .totop {
+  line-height: 50px;
+  width: 50px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  right: 50px;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  background: bisque;
+}
 /*登录*/
 .login {
   background: #fff;
@@ -282,6 +296,7 @@ header #head .headright .shoppingcar .iconfont {
   font-size: 0;
   text-align: center;
   display: none;
+  z-index: 10;
 }
 .login .cha:hover {
   cursor: pointer;

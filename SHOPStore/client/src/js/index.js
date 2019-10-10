@@ -6,7 +6,7 @@ import "../less/footer.less";
 
 import { BASE_URL } from "./lib";
 
-import { user_login, login_and_register, checklogin } from "../js/register";
+import { user_login, login_and_register, checklogin, totop } from "../js/func";
 
 $(function(){
    checklogin()
@@ -36,31 +36,9 @@ $(function(){
       $(`<img src="${BASE_URL}/images/s${qhxb}l.jpg"  class="img2">`).appendTo($(itm));
    });
 
-
+   totop()
    login_and_register()
    user_login()
-
-   //登录注册显示隐藏
-   $(".login-btn").on("click",function(){
-      $(".login").css("display","block")
-   });
-   $(".cha").on("click",function(){
-      $(".login").css("display","none");
-      $(".register").css("display","none")
-   });
-   $(".register-btn").on("click",function(){
-      $(".register").css("display","block")
-   })
-   //点击登录/注册上面的两个互相切换
-   $(".login-but").on("click",function(){
-      $(".login").css("display","block");
-      $(".register").css("display","none")
-   })
-   $(".register-but").on("click",function(){
-      $(".register").css("display","block");
-      $(".login").css("display","none")
- 
-   })
    
 })
 
