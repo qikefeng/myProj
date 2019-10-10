@@ -6,9 +6,9 @@ const router  = express.Router();
 // 3. 处理路由对象
 const getConnection = require("../mysqlConnection");
 router.post("/register", (req, res) => {
-    let {username, password, tel, email} = req.body;
-    let sqlParams = [username, password, tel, email];
-    let sql = "INSERT INTO user (username, password, tel, email) VALUES (?,?,?,?)";
+    let {username, email, password} = req.body;
+    let sqlParams = [username, email, password];
+    let sql = "INSERT INTO users (username, email, password) VALUES (?,?,?)";
     let db = getConnection();
     db.connect();
     db.query(sql, sqlParams, (err, sqlRes) => {
@@ -19,6 +19,7 @@ router.post("/register", (req, res) => {
                 errMsg: "用户已存在"
             })
         }else {
+            console.log(username,"用户注册成功");
             res.send({
                 status: "200",
                 user: req.body
@@ -26,38 +27,28 @@ router.post("/register", (req, res) => {
         }
     })
     db.end();
-})
+});
 router.post("/login", (req, res) => {
     let {username, password} = req.body;
-    let sqlParams = [username];
-    let sql = "SELECT * FROM user WHERE username = ?";
+    let sqlParams = [username, password];
+    let sql = "SELECT * FROM users WHERE username = ? and password = ?";
     let db = getConnection();
     db.connect();
     db.query(sql, sqlParams, (err, sqlRes) => {
-       
+        console.log(sqlRes)
         if(sqlRes.length == 0) {
             res.send({
                 status: "202",
-                errMsg: "用户不存在"
+                errMsg: "用户或密码错误"
             })
         }else {
             let user = sqlRes[0];
-            if(username == user.username && password == user.password) {
-                delete user.password;
-                res.send({
-                    status: "200",
-                    user
-                })
-            }else {
-                res.send({
-                    status: "203",
-                    errMsg: "密码错误"
-                })
-            }
+            delete user.password;
+            console.log(`${user.username}用户登陆成功`);
+            res.send({status: "200",user});
         }
     })
     db.end();
-
 });
 
 

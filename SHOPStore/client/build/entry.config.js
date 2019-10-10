@@ -5,5 +5,7 @@ module.exports = {
     "detail": "./src/js/detail.js",
     "account": "./src/js/account.js",
     "loading": "./src/js/loading.js",
-    "detail": "./src/js/detail.js"
+    "detail": "./src/js/detail.js",
+    "search": "./src/js/search.js",
+    "register": "./src/js/register.js"
 }
