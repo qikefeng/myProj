@@ -198,10 +198,29 @@ header {
             .loginbox {
                 color: rgb(31, 168, 226);
                 width: 30%;
-                min-width: 110px;
+                min-width: 200px;
                 text-align: center;
                 position: relative;
                 font-size: @nav-font;
+
+                .usr {
+                    line-height: 20px;
+                    display: inline-block;
+                    min-width: 130px;
+                    font-size: 12px;
+                    color: white;
+                    text-align: left;
+                }
+
+                .user {
+                    line-height: 65px;
+                    font-size: 15px;
+
+                    vertical-align: top;
+                    display: inline-block;
+                    cursor: pointer;
+                    color: white;
+                }
 
                 .rightbox {
                     width: 1px;
@@ -318,5 +337,139 @@ header {
                 }
             }
         }
+    }
+}
+
+/*登录*/
+.login {
+    background: #fff;
+    position: fixed;
+    width: 505px;
+    top: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0;
+    text-align: center;
+    display: none;
+
+    .cha:hover {
+        cursor: pointer;
+    }
+
+    .register-but:hover {
+        cursor: pointer;
+    }
+
+    .username {
+        margin-top: 40px;
+        border: 1px solid #333;
+        width: 300px;
+        height: 41px;
+        text-indent: 10px;
+    }
+
+    .password {
+        margin-top: 20px;
+        border: 1px solid #333;
+        width: 300px;
+        height: 41px;
+        text-indent: 10px;
+    }
+
+    .login-an {
+        width: 302px;
+        margin: 0 auto;
+        text-align: left;
+
+        p {
+            display: inline-block;
+            font-size: 14px;
+            margin: 10px 0 20px 0;
+            color: #BFBFBF;
+        }
+
+        button {
+            width: 302px;
+            display: block;
+            background: #1E95F1;
+            height: 42px;
+            color: white;
+            font-size: 20px;
+            font-family: "微软雅黑", Arial;
+        }
+
+        .tis {
+            width: 100%;
+            text-align: center;
+            color: #a7a7a7;
+            font-size: 12px;
+        }
+    }
+}
+
+/*注册*/
+.register {
+    background: #fff;
+    position: fixed;
+    width: 505px;
+    top: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0;
+    text-align: center;
+    z-index: 10;
+    display: none;
+
+    form {
+        width: 302px;
+        margin: 0 auto;
+        position: relative;
+
+        .item::after {
+            content: attr(data-tips);
+            color: red;
+            font-size: 14px;
+            position: absolute;
+            left: 0;
+            display: none;
+        }
+
+        .item.err::after {
+            display: block;
+        }
+    }
+
+    .cha:hover {
+        cursor: pointer;
+    }
+
+    .login-but:hover {
+        cursor: pointer;
+    }
+
+    input {
+        margin-top: 25px;
+        border: 1px solid #333;
+        width: 300px;
+        height: 41px;
+        text-indent: 10px;
+    }
+
+    button:hover {
+        color: #333;
+        cursor: pointer;
+    }
+
+    button {
+        width: 302px;
+        background: #1E95F1;
+        height: 42px;
+        color: white;
+        font-size: 20px;
+        font-family: "微软雅黑", Arial;
+        margin: 0 auto;
+        margin-top: 30px;
+        margin-bottom: 20px;
+
     }
 }
