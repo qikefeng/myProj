@@ -29,9 +29,11 @@ app.use(bodyParser.json());
 const userRouter  = require("./routes/user");
 const otherRouter = require("./routes/other");
 const goodsRouter  = require("./routes/goods");
+const orderRouter  = require("./routes/order");
 app.use("/user", userRouter);
 app.use("/other", otherRouter);
 app.use("/goods", goodsRouter);
+app.use("/order", orderRouter);
 app.get("/", (req, res) => {
     res.send("Hello, Nicolas family！")
 })
