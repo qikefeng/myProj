@@ -659,6 +659,7 @@ body{
     width: 80%;
     margin: 0 auto;
     font-size: 0;
+    padding-bottom: 35px;
     :first-child{
         border-left: 0;
     }
@@ -677,6 +678,123 @@ body{
             display: none;
         }
     }
+}
+
+
+/*图片轮播*/
+.scroll .flash {
+    min-width: 1000px;
+    position: relative;
+    overflow: hidden;
+
+}
+.scroll .wrapper {
+    width: calc(5 * 100%);
+    font-size: 0; 
+}
+.scroll .slide {
+    width: calc(100% / 5);
+}
+
+
+.scroll .button {
+    width: 45px;
+    height: 30px;
+    background: red;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.scroll .prev {
+    left: 20px;
+    background: url("http://127.0.0.1:8081/images/arr_left.png") no-repeat center center;
+}
+.scroll .next {
+    right: 20px;
+    background: url("http://127.0.0.1:8081/images/arr_right.png") no-repeat center center;
+}
+
+
+.scroll .pagination {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+}
+.scroll .pagination-item {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: purple;
+    margin: 0 8px;
+    cursor: pointer;
+}
+.scroll .pagination-item.sel,
+.scroll .pagination-item:hover {
+    background: orange;
+}
+
+
+/*第二个图片轮播*/
+.scroll2{
+    width: 1212px;
+    margin: 0 auto;
+    h1{
+        padding: 10px 0 10px 42px;
+        font-size: 24px;
+        font-weight: normal;
+        line-height: 50px;
+        text-align: center;
+    }
+    .flash2 {
+        position: relative;
+        overflow: hidden;
+        .wrapper2{
+            width: calc(5 * 100%);
+            font-size: 0; 
+            .slide2{
+                width: calc(100% / 5);
+                display: inline;
+                :first-child{
+                    margin-right: 15px;
+                }
+            }
+        }
+    }
+    .button2 {
+        width: 45px;
+        height: 30px;
+        background: red;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+    .prev2{
+        left: -30px;
+        background: url("http://127.0.0.1:8081/images/arr_left2.png") no-repeat center center;
+    }
+    .next2{
+        right: -30px;
+        background: url("http://127.0.0.1:8081/images/arr_right2.png") no-repeat center center;
+    }
+    .pagination2{
+        text-align: center;
+    
+    .pagination-item2 {
+        display: inline-block;
+        width: 13px;
+        height: 13px;
+        background: #666;
+        margin: 10px 8px;
+        cursor: pointer;
+    }}
+}
+.scroll2 .pagination-item2.sel2,
+.scroll2 .pagination-item2:hover {
+    background: #2591da;
 }
 
 

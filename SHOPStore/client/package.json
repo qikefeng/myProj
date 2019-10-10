@@ -36,7 +36,8 @@
     "webpack-dev-server": "^3.8.1"
   },
   "dependencies": {
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
     "jquery": "^3.4.1",
-    "swiper": "^5.0.3"
+    "swiper": "^5.0.4"
   }
 }
